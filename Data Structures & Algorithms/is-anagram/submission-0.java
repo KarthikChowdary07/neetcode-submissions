@@ -5,15 +5,15 @@ class Solution {
             return false;
         }
 
-        int[] freq = new int[26];
+        int[] count = new int[26];
 
         for (int i = 0; i < s.length(); i++) {
-            freq[s.charAt(i) - 'a']++;
-            freq[t.charAt(i) - 'a']--;
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
         }
 
-        for (int count : freq) {
-            if (count != 0) {
+        for (int x : count) {
+            if (x != 0) {
                 return false;
             }
         }
